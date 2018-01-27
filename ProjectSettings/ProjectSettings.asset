@@ -161,8 +161,6 @@ PlayerSettings:
     Android: com.WikiPon.WikiPon1
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  buildNumber: {}
-  AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -248,7 +246,7 @@ PlayerSettings:
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/Program Files/Java/jdk-9.0.4/bin/wiki_key.keystore
   AndroidKeyaliasName: wiki
-  AndroidTVCompatibility: 1
+  AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
@@ -275,10 +273,13 @@ PlayerSettings:
   - m_BuildTarget: AndroidPlayer
     m_APIs: 0b00000008000000
     m_Automatic: 0
-  m_BuildTargetVRSettings: []
-  m_BuildTargetEnableVuforiaSettings:
+  m_BuildTargetVRSettings:
   - m_BuildTarget: Android
     m_Enabled: 0
+    m_Devices: []
+  m_BuildTargetEnableVuforiaSettings:
+  - m_BuildTarget: Android
+    m_Enabled: 1
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}

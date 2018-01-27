@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="up" size="2.000000 2.000000" />
+    <ImageTarget name="right" size="2.000000 2.000000" />
+    <ImageTarget name="left" size="2.000000 2.000000" />
+    <ImageTarget name="3" size="2.000000 2.000000" />
+    <ImageTarget name="2" size="2.000000 2.000000" />
+    <ImageTarget name="1" size="2.000000 2.000000" />
+    <ImageTarget name="mapa" size="2.000000 2.827688" />
     <ImageTarget name="viking4" size="2.000000 2.000000" />
     <ImageTarget name="viking3" size="2.000000 2.000000" />
     <ImageTarget name="viking2" size="2.000000 2.000000" />
