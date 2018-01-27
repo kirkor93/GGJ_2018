@@ -3,7 +3,7 @@ using Akki;
 using Akki.Networking;
 using UnityEngine;
 
-public class Movement : AkkiNetworkBehaviour
+public class PlayerScript : AkkiNetworkBehaviour
 {
     public enum SwipeDirection
     {
@@ -26,14 +26,6 @@ public class Movement : AkkiNetworkBehaviour
         {
             return;
         }
-
-        //if (Time.time > _nextBroadcastTime)
-        //{
-        //    Debug.Log("Timely Send message ... ");
-        //    this.OnMessageSend();
-        //    _nextBroadcastTime = Time.time + .16f;
-        //}
-
 
         if (Input.touchCount == 0)
             return;

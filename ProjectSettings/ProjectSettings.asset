@@ -161,8 +161,6 @@ PlayerSettings:
     Android: com.WikiPon.WikiPon1
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  buildNumber: {}
-  AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

@@ -24,14 +24,13 @@ public class Demo : MonoBehaviour
 
     void Start()
     {
-        Movement m = AkkiNetworkManager.Instance.Player.GetComponent<Movement>();
+        PlayerScript m = AkkiNetworkManager.Instance.Player.GetComponent<PlayerScript>();
         AkkiNetworkManager.Instance.RoomConnected += m.OnRoomJoined;
     }
 
     public void OnSignIn()
     {
         AkkiGpgsManager.Instance.SignIn();
-
         AkkiGpgsManager.Instance.RealTimeRoomManager.Listener = AkkiNetworkManager.Instance;
     }
 
@@ -110,7 +109,6 @@ public class Demo : MonoBehaviour
         byte[] messageToSend = _updateMessage.ToArray();
         AkkiGpgsManager.Instance.RealTimeRoomManager.SendMessageToAll(false, messageToSend);
     }
-
     #endregion
 }
 

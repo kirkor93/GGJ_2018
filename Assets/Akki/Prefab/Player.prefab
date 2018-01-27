@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65925505139878538}
   - component: {fileID: 23910537645901386}
   - component: {fileID: 114296694684214482}
-  - component: {fileID: 114914395243299540}
+  - component: {fileID: 114620103785021324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1efb7f9eb7350e44a13c5a9cfe35ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114914395243299540
+--- !u!114 &114620103785021324
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
