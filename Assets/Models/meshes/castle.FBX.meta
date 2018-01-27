@@ -29,6 +29,13 @@ ModelImporter:
     100042: Cylinder006
     100044: Cylinder007
     100046: Cylinder008
+    100048: Box020
+    100050: Box021
+    100052: Box022
+    100054: Cylinder045
+    100056: Cylinder046
+    100058: Cylinder047
+    100060: Cylinder048
     400000: Box001
     400002: Box002
     400004: Box003
@@ -53,6 +60,13 @@ ModelImporter:
     400042: Cylinder006
     400044: Cylinder007
     400046: Cylinder008
+    400048: Box020
+    400050: Box021
+    400052: Box022
+    400054: Cylinder045
+    400056: Cylinder046
+    400058: Cylinder047
+    400060: Cylinder048
     2100000: No Name
     2300000: Box001
     2300002: Box002
@@ -77,6 +91,13 @@ ModelImporter:
     2300040: Cylinder006
     2300042: Cylinder007
     2300044: Cylinder008
+    2300046: Box020
+    2300048: Box021
+    2300050: Box022
+    2300052: Cylinder045
+    2300054: Cylinder046
+    2300056: Cylinder047
+    2300058: Cylinder048
     3300000: Box001
     3300002: Box002
     3300004: Box003
@@ -100,6 +121,13 @@ ModelImporter:
     3300040: Cylinder006
     3300042: Cylinder007
     3300044: Cylinder008
+    3300046: Box020
+    3300048: Box021
+    3300050: Box022
+    3300052: Cylinder045
+    3300054: Cylinder046
+    3300056: Cylinder047
+    3300058: Cylinder048
     4300000: Box010
     4300002: Cylinder008
     4300004: Cylinder007
@@ -123,6 +151,13 @@ ModelImporter:
     4300040: Box003
     4300042: Box002
     4300044: Box001
+    4300046: Box020
+    4300048: Box021
+    4300050: Box022
+    4300052: Cylinder045
+    4300054: Cylinder046
+    4300056: Cylinder047
+    4300058: Cylinder048
   externalObjects: {}
   materials:
     importMaterials: 1
