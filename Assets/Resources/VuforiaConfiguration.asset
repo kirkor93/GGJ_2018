@@ -18,7 +18,7 @@ MonoBehaviour:
     cameraDeviceModeSetting: -3
     maxSimultaneousImageTargets: 10
     maxSimultaneousObjectTargets: 10
-    useDelayedLoadingObjectTargets: 1
+    useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 2
   digitalEyewear:
