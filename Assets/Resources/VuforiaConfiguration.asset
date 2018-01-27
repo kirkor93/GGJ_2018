@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: AZ3xfWT/////AAAAmUyJGLOU90mMsgj+8oQtY06KunmRnkZGVUvbOv1HlAIV4mAmK2B+jnWJy28yQf2DItTinR2DLP0kNvZjTNkDqiqes2fotFZy5IY7kFj55Xd/ONZ6itbHdVHWkRj07A4EzqWFXJW62CXqqraOqapb3t95Br/gN3Qw+YGKs5VbKrH+abRR9RdnwdVZ67a0DxIbMGnfo8IyNAhDns/4Fha9ckrB1x9p3qsY66WHVhNVzbfWinkpoE3m51NP/iVNQNUBFbgBbI56aOrrQbPIEfqK8UO39JQQRslW0K67Rq9AEv0yv/bz3726QXQMEF9rfszO+rjDNvdlvMJkaBWtcNvLbyeehbkQ8Lc8IUTJgQEuG6Sn
     ufoLicenseKey: QVVkZ054ci8vLy8vQUFBQUtMVExJOEdKSDBJYmdtNEszYjZ5N3NncEE5MmNiMnNKdHlUSm02RWp4RFYwbUo0UEdlMVJ1NU1iVmh3Z24yMGhVT3NsUFhZRWRZRGlXaTl3MGtxc1VOblMxOGI2TC9Hd0xyTWo2VTkvbVBzVk4wQ3F4UFptTlZTd0hhK3dQOUoyOXZ1WUYxSzNWbTdvR2tDQnBFZnRMWTM0WkFmSDBKNkJPbVhxRFcxWXhta29peGNQUjRwcnZkckJTc1NvdW9pNWRWRGorOCsvS3A1UFlzZ0hkc2piMnd1VitGcTlSc2lNQStsWjl4QStPNmFHYjMzVU1qaDNHZ0pzUUZmUDdNQjRiMHl5Ni9vRmVlTHF3VUQ3SUpoS0dKekFOSTVESGFlS2JLWURCL2lta1pUMHJtaVdCdUxIL1B0aG1Nb0ljbkV6eTFYRDBJamk4SUp4UzRjWVg3MXcvYk5TTU9jOGdyRFcvRDBUSkxlYjR3NzI=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
-    useDelayedLoadingObjectTargets: 0
+    maxSimultaneousImageTargets: 10
+    maxSimultaneousObjectTargets: 10
+    useDelayedLoadingObjectTargets: 1
     cameraDirection: 0
-    mirrorVideoBackground: 0
+    mirrorVideoBackground: 2
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
@@ -46,9 +46,15 @@ MonoBehaviour:
     dataSetsToLoad:
     - VuforiaMars_Images
     - VuforiaMars_VuMark
+    - GGJ2018
+    - VuforiaMars_Object_OT
+    - VuforiaMars_ModelTarget
     dataSetsToActivate:
     - VuforiaMars_Images
     - VuforiaMars_VuMark
+    - GGJ2018
+    - VuforiaMars_Object_OT
+    - VuforiaMars_ModelTarget
   videoBackground:
     clippingMode: 0
     numDivisions: 2
@@ -57,11 +63,11 @@ MonoBehaviour:
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoInitTracker: 0
-    autoStartTracker: 0
+    autoInitTracker: 1
+    autoStartTracker: 1
     trackingMode: 0
-    posePrediction: 0
-    modelCorrectionMode: 0
+    posePrediction: 1
+    modelCorrectionMode: 2
     modelTransformEnabled: 0
     modelTransform: {x: 0, y: 0.1, z: -0.1}
   smartTerrain:
@@ -71,4 +77,4 @@ MonoBehaviour:
     deviceNameSetInEditor: 
     flipHorizontally: 0
     turnOffWebCam: 0
-    renderTextureLayer: 30
+    renderTextureLayer: 0
