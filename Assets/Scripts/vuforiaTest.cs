@@ -36,7 +36,7 @@ public class vuforiaTest : MonoBehaviour
 		else if(!generatedBoard)
 		{
 			plane.transform.position = targetImage.transform.position - new Vector3(0, 0.1f, 0);
-			plane.transform.rotation = targetImage.transform.rotation;
+			plane.transform.eulerAngles = targetImage.transform.eulerAngles - new Vector3(90, 0, 0);
 			plane.SetActive(true);
 			generatedBoard = true;
 		}
@@ -48,7 +48,7 @@ public class vuforiaTest : MonoBehaviour
 					plane.SetActive(true);
 
 				plane.transform.position = targetImage.transform.position - new Vector3(0,0.1f,0);
-				plane.transform.rotation = targetImage.transform.rotation;
+				plane.transform.eulerAngles = targetImage.transform.eulerAngles - new Vector3(90, 0, 0);
 			}
 			else if(plane.activeSelf)
 			{
