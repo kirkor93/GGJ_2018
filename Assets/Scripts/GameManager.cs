@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour {
 
         playerActiveId = 0;
         SetStartGame(true);
-        //actionButton.interactable = false;
+        actionButton.interactable = false;
         avatars[0].color = new Color(1, 1, 1, 1);
         avatars[1].color = new Color(1, 1, 1,.3f);
     }
@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour {
         for (int i = 0; i < wikiPonCounter; i++)
         {
             GameObject newWiki = GameObject.Instantiate(newWikiPon);
-            newWiki.transform.position = lastNode.transform.position;
+            //newWiki.transform.position = lastNode.transform.position;
             Vikipon newV = newWiki.GetComponent<Vikipon>();
 
             if (playerS.idPlayer == 0)
@@ -204,6 +204,7 @@ public class GameManager : MonoBehaviour {
             newV.Move(lastNode, playerS.newNodesWay[i]);
             newWikiPon.transform.SetParent(playerS.newNodesWay[i].transform);
             newWikiPon.transform.localPosition = Vector3.zero;
+            newWikiPon.transform.eulerAngles = Vector3.zero;
             //TO DO - animations
         }
     }
