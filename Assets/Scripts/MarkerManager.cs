@@ -57,7 +57,7 @@ public class MarkerManager : MonoBehaviour
 
 				Debug.Log("Sukces!: " + wikiType + " " + dir + " " + power);
 
-				//game.GetActivePlayer().SetActionStructureValues(wikiType, dir, power);
+				game.GetActivePlayer().SetActionStructureValues(wikiType, dir, power);
 			}
 		}
 	}
