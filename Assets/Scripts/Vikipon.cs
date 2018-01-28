@@ -8,9 +8,11 @@ public class Vikipon : MonoBehaviour
 	public PlayerScript.WikiPonType type;
 	public bool isSmall = false;
 	Animator anim;
+	Board board;
 
-	public void Init(bool small)
+	public void Init(bool small, Board _board)
 	{
+		board = _board;
 		isSmall = small;
 		anim = GetComponentInChildren<Animator>();
 
@@ -44,7 +46,19 @@ public class Vikipon : MonoBehaviour
 			time = 1.0f * Mathf.Abs(currentNode.idX - targetNode.idX);
 		}
 
-		transform.DOMove(targetNode.transform.position, time).OnComplete(() => anim.SetBool("moving", false));
+		transform.DOMove(targetNode.transform.position, time).OnComplete(() =>
+		{
+			anim.SetBool("moving", false);
+			board.SpawnParticles(currentNode, targetNode, type);
+
+			if(targetNode.haveChest)
+			{
+				//DAĆ PUNKTA
+				targetNode.haveChest = false;
+				targetNode.chest.SetActive(false);
+				board.currentChests.Remove(targetNode.chest);
+			}
+		});
 	}
 
 }
