@@ -203,6 +203,7 @@ public class GameManager : MonoBehaviour {
 
             newV.Move(lastNode, playerS.newNodesWay[i]);
             newWikiPon.transform.SetParent(playerS.newNodesWay[i].transform);
+            newWikiPon.transform.localPosition = Vector3.zero;
             //TO DO - animations
         }
     }
