@@ -373,6 +373,7 @@ public class PlayerScript : AkkiNetworkBehaviour
 
     public void MakeAction()
     {
+        gM.actionButton.interactable = false;
         gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this);
         MovePlayer();
     }
