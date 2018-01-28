@@ -202,6 +202,7 @@ public class GameManager : MonoBehaviour {
             }
 
             newV.Move(lastNode, playerS.newNodesWay[i]);
+            newWikiPon.transform.SetParent(playerS.newNodesWay[i].transform);
             //TO DO - animations
         }
     }

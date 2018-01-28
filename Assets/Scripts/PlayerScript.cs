@@ -86,7 +86,7 @@ public class PlayerScript : MonoBehaviour
         transform.position = startNode.position;
 
         ActionStructure actionStruct = new ActionStructure( WikiPonType.None, MoveDirection.Up, 0);
-        SetActionStructureValues(WikiPonType.Red, MoveDirection.Right, 3);
+        //SetActionStructureValues(WikiPonType.Red, MoveDirection.Right, 3);
     }
 
     //Move
@@ -279,6 +279,6 @@ public class PlayerScript : MonoBehaviour
 
         gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this, lastN);
         gM.ChangeActivePlayer();
-        SetActionStructureValues(WikiPonType.Red, MoveDirection.Up, 3);
+        //SetActionStructureValues(WikiPonType.Red, MoveDirection.Up, 3);
     }
 }
