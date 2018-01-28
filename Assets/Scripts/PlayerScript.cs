@@ -66,6 +66,11 @@ public class PlayerScript : AkkiNetworkBehaviour
     private float _nextBroadcastTime = 0;
     private Vector3 LastPlayerPosition;
 
+    public void InitData()
+    {
+
+    }
+
     void Update()
     {
         if (!IsLocalPlayer)
@@ -163,8 +168,10 @@ public class PlayerScript : AkkiNetworkBehaviour
     {
         if (success)
         {
-            Demo.Instance.canvas.SetActive(false);
+            //Demo.Instance.canvas.SetActive(false);
             Demo.Instance.Backbutton.SetActive(true);
+            gM.SetCanvas(0, false);
+            gM.SetCanvas(2, true);
         }
     }
 
@@ -359,7 +366,13 @@ public class PlayerScript : AkkiNetworkBehaviour
         actionStruct.wikiPonType = wP;
         actionStruct.moveType = mD;
         actionStruct.incrementatorType = iC;
-        gM.CreateWikiPon(wP, iC, this);
+
+        gM.actionButton.interactable = true;
+    }
+
+    public void MakeAction()
+    {
+        gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this);
         MovePlayer();
     }
 }

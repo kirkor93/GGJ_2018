@@ -9,6 +9,7 @@ public class Demo : MonoBehaviour
     public static Demo Instance;
     public GameObject canvas;
     public GameObject Backbutton;
+    public GameManager gM;
 
     void Awake()
     {
@@ -26,6 +27,10 @@ public class Demo : MonoBehaviour
     {
         PlayerScript m = AkkiNetworkManager.Instance.Player.GetComponent<PlayerScript>();
         AkkiNetworkManager.Instance.RoomConnected += m.OnRoomJoined;
+        gM.AddNewPlayer(m);
+        gM.SetCanvas(0, true);
+        gM.SetCanvas(1, false);
+        gM.SetCanvas(2, false);
     }
 
     public void OnSignIn()
