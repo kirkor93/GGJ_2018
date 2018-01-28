@@ -205,6 +205,8 @@ public class GameManager : MonoBehaviour {
             newWikiPon.transform.SetParent(playerS.newNodesWay[i].transform);
             newWikiPon.transform.localPosition = Vector3.zero;
             newWikiPon.transform.eulerAngles = Vector3.zero;
+            scoresValues[playerActiveId] += 10;
+            SetScoresUI();
             //TO DO - animations
         }
     }
