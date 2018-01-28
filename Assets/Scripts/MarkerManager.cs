@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class MarkerManager : MonoBehaviour
 {
+	public AudioManager audioManager;
 	public GameManager game;
 	public List<Marker> markers;
+
+	bool soundPlayed = false;
 
 	private void Update()
 	{
@@ -31,7 +34,6 @@ public class MarkerManager : MonoBehaviour
 				}
 			}
 
-
 			PlayerScript.WikiPonType wikiType = PlayerScript.WikiPonType.None;
 			PlayerScript.MoveDirection dir = PlayerScript.MoveDirection.Left;
 			int power = 0;
@@ -41,6 +43,9 @@ public class MarkerManager : MonoBehaviour
 				if (m.myType == Marker.Type.vikipod)
 				{
 					wikiType = m.wikiType;
+
+
+
 				}
 				else if (m.myType == Marker.Type.direction)
 				{
@@ -54,11 +59,37 @@ public class MarkerManager : MonoBehaviour
 
 			if (visibleTypes.Count == 3)
 			{
+				if(!soundPlayed && !audioManager.GetComponent<AudioSource>().isPlaying)
+				{
+					if (wikiType == PlayerScript.WikiPonType.Blue)
+					{
+						audioManager.PlaySound("blue");
+					}
+					else if (wikiType == PlayerScript.WikiPonType.Red)
+					{
+						audioManager.PlaySound("red");
+					}
+					else if (wikiType == PlayerScript.WikiPonType.Yellow)
+					{
+						audioManager.PlaySound("yellow");
+					}
+					else if (wikiType == PlayerScript.WikiPonType.Purple)
+					{
+						audioManager.PlaySound("purple");
+					}
 
-				Debug.Log("Sukces!: " + wikiType + " " + dir + " " + power);
-
-				game.GetActivePlayer().SetActionStructureValues(wikiType, dir, power);
+					game.GetActivePlayer().SetActionStructureValues(wikiType, dir, power);
+					soundPlayed = true;
+				}
 			}
+			else
+			{
+				soundPlayed = false;
+			}
+		}
+		else
+		{
+			soundPlayed = false;
 		}
 	}
 }
