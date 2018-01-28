@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
+    public PlayerScript GetActivePlayer()
+    {
+        return playersList[playerActiveId];
+    }
+
     internal void InitData()
     {
         allCards = 72;
