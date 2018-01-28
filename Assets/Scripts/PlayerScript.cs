@@ -353,6 +353,7 @@ public class PlayerScript : AkkiNetworkBehaviour
 
     private void AddNodeToWay()
     {
+        actualNode.colorType = actionStruct.wikiPonType;
         newNodesWay.Add(actualNode);
     }
 
