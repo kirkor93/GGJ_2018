@@ -119,4 +119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90252577804a06f4bb8f21f51591ac2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gM: {fileID: 0}
+  incrementation: 0
+  actualNode: {fileID: 0}
+  playerObelisk: {fileID: 0}
+  isActivePlayer: 0
+  idPlayer: 0
+  newNodesWay: []
+  playerScore: 0
+  startNode: {fileID: 0}
   speed: 1
