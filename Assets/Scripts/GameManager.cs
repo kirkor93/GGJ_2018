@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class GameManager : MonoBehaviour {
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour {
     public GameObject[] wikiPonPrefabs; // 0 - Blue , 1- Purple, 2 - Red, 3 - Yello
     public List<GameObject> wikiPons1, wikiPons2;
     public float offSetNode = .14f;
+
+    //UI
+    Text[] playerScoresTxt;
 
 
 	// Use this for initialization
@@ -87,10 +91,15 @@ public class GameManager : MonoBehaviour {
 
         for (int i = 0; i < wikiPonCounter; i++)
         {
+            GameObject newWiki = GameObject.Instantiate(newWikiPon);
+            newWiki.transform.position = playerS.actualNode.transform.position;
+
             if (playerS.idPlayer == 0)
-            {
-                GameObject newWiki = GameObject.Instantiate(newWikiPon, playerS.actualNode.transform);
-            }
+                wikiPons1.Add(newWiki);
+            else
+                wikiPons2.Add(newWiki);
+
+            //TO DO - animations
         }
     }
 }

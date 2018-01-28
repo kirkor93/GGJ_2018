@@ -41,6 +41,7 @@ public class PlayerScript : AkkiNetworkBehaviour
     public bool isActivePlayer;
     public int idPlayer = 0; // 0 - first, 1 - left
     public List<Node> newNodesWay;
+    public int playerScore;
 
     public struct ActionStructure
     {
@@ -346,5 +347,19 @@ public class PlayerScript : AkkiNetworkBehaviour
     private void AddNodeToWay()
     {
         newNodesWay.Add(actualNode);
+    }
+
+    public void VibratePhone()
+    {
+        Handheld.Vibrate();
+    }
+
+    public void SetActionStructureValues(PlayerScript.WikiPonType wP, PlayerScript.MoveDirection mD, int iC)
+    {
+        actionStruct.wikiPonType = wP;
+        actionStruct.moveType = mD;
+        actionStruct.incrementatorType = iC;
+        gM.CreateWikiPon(wP, iC, this);
+        MovePlayer();
     }
 }
