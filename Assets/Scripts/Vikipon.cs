@@ -48,6 +48,7 @@ public class Vikipon : MonoBehaviour
 
 		transform.DOMove(targetNode.transform.position, time).OnComplete(() =>
 		{
+			transform.parent = targetNode.transform;
 			anim.SetBool("moving", false);
 			board.SpawnParticles(currentNode, targetNode, type);
 

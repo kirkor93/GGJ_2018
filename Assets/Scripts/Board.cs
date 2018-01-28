@@ -58,6 +58,7 @@ public class Board : MonoBehaviour
 			GameObject chest = Instantiate(chestPrefab);
 			chest.transform.parent = targetNode.transform;
 			chest.transform.localPosition = Vector3.zero;
+			chest.transform.localScale = Vector3.one * 0.15f;
 			currentChests.Add(chest);
 			targetNode.chest = chest;
 		}
