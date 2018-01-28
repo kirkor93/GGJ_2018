@@ -1150,7 +1150,7 @@ MonoBehaviour:
   targetImage: {fileID: 150023881}
   scanned: 0
   generatedBoard: 0
-  plane: {fileID: 2096733094}
+  plane: {fileID: 1035566120}
 --- !u!4 &505076741
 Transform:
   m_ObjectHideFlags: 0
@@ -1956,6 +1956,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 95727156319970914, guid: 7aec03aca2879b246b266adf4f98c997,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ea9abe531859b114cbc77d9d405ad97c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7aec03aca2879b246b266adf4f98c997, type: 2}
   m_IsPrefabParent: 0
@@ -2132,6 +2137,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031990564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1035566120 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1884216118964076, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096733093}
 --- !u!1 &1039789882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2720,11 @@ MonoBehaviour:
   power: 3
   myType: 2
   isShowed: 0
+--- !u!4 &1387904040 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4108498245026610, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096733093}
 --- !u!1 &1418441586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3068,137 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1521257673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1537143823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1537143826}
+  - component: {fileID: 1537143825}
+  - component: {fileID: 1537143824}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1537143824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537143823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514c363abce0f5c4597a43541421021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: 6d8f8188bde9b8042a6d0fc57762598c, type: 3}
+  endRoundClip: {fileID: 8300000, guid: 10b78ede132d62c448da6afdb1124f6d, type: 3}
+  startRoundClip: {fileID: 8300000, guid: 98e8152fa8165c94fb4fbd09df2e126f, type: 3}
+  pointsForEndClip: {fileID: 8300000, guid: 667fbb0de48099d43acbacd220cc9ed3, type: 3}
+  pointsForObeliskClip: {fileID: 8300000, guid: 0b7051522d511c547a709785d8b44f12,
+    type: 3}
+  redClip: {fileID: 8300000, guid: 924f8fa7aeee3754f902d46e7124a1e9, type: 3}
+  yellowClip: {fileID: 8300000, guid: b9a74cca3ac5de943ad2460501f0b877, type: 3}
+  blueClip: {fileID: 8300000, guid: d2cf4dced232489419f92cf43d404f6c, type: 3}
+  purpleClip: {fileID: 8300000, guid: 2296db8430501194e86226d4169f5b71, type: 3}
+--- !u!82 &1537143825
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537143823}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1537143826
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537143823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.9983163, y: 11.801691, z: 2.456692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628964447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,12 +3339,12 @@ Prefab:
         type: 2}
       propertyPath: obelisks.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2136115308}
     - target: {fileID: 114096382224027882, guid: 5a9f77cfafb855e48818fd3a2ffd3687,
         type: 2}
       propertyPath: obelisks.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1387904040}
     - target: {fileID: 114096382224027882, guid: 5a9f77cfafb855e48818fd3a2ffd3687,
         type: 2}
       propertyPath: wikiPonPrefabs.Array.data[0]
@@ -4135,8 +4281,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82b3b8b7ad4b9174e92aad3526bfe43e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2096733094 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1884216118964076, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+--- !u!4 &2136115308 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4423027497039072, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
     type: 2}
   m_PrefabInternal: {fileID: 2096733093}
