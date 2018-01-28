@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 5df4f9462524d9c449e41bbb8ffcf4e0
+timeCreated: 1517141021
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base HumanHead001
+    100002: Base HumanLCalf001
+    100004: Base HumanLCollarbone001
+    100006: Base HumanLFoot001
+    100008: Base HumanLForearm001
+    100010: Base HumanLPalm001
+    100012: Base HumanLThigh001
+    100014: Base HumanLUpperarm001
+    100016: Base HumanNeck003
+    100018: Base HumanNeck004
+    100020: Base HumanPelvis001
+    100022: Base HumanRCalf001
+    100024: Base HumanRCollarbone001
+    100026: Base HumanRFoot001
+    100028: Base HumanRForearm001
+    100030: Base HumanRibcage001
+    100032: Base HumanRPalm001
+    100034: Base HumanRThigh001
+    100036: Base HumanRUpperarm001
+    100038: Base HumanSpine005
+    100040: Base HumanSpine006
+    100042: Base HumanSpine007
+    100044: Base HumanSpine008
+    100046: Box021
+    100048: Box026
+    100050: Object002
+    100052: Plane007
+    100054: //RootNode
+    400000: Base HumanHead001
+    400002: Base HumanLCalf001
+    400004: Base HumanLCollarbone001
+    400006: Base HumanLFoot001
+    400008: Base HumanLForearm001
+    400010: Base HumanLPalm001
+    400012: Base HumanLThigh001
+    400014: Base HumanLUpperarm001
+    400016: Base HumanNeck003
+    400018: Base HumanNeck004
+    400020: Base HumanPelvis001
+    400022: Base HumanRCalf001
+    400024: Base HumanRCollarbone001
+    400026: Base HumanRFoot001
+    400028: Base HumanRForearm001
+    400030: Base HumanRibcage001
+    400032: Base HumanRPalm001
+    400034: Base HumanRThigh001
+    400036: Base HumanRUpperarm001
+    400038: Base HumanSpine005
+    400040: Base HumanSpine006
+    400042: Base HumanSpine007
+    400044: Base HumanSpine008
+    400046: Box021
+    400048: Box026
+    400050: Object002
+    400052: Plane007
+    400054: //RootNode
+    2100000: 'Material #49'
+    2100002: 'Material #48'
+    2100004: 'Material #47'
+    2100006: 'Material #42'
+    2100008: 'Material #43'
+    2100010: 'Material #46'
+    2100012: 'Material #45'
+    2300000: Box026
+    2300002: Object002
+    2300004: Plane007
+    3300000: Box026
+    3300002: Object002
+    3300004: Plane007
+    4300000: Object002
+    4300002: Box026
+    4300004: Plane007
+    4300006: Box021
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box021
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
