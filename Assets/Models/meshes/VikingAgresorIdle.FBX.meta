@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 23cb0f15f62945a4e8c226e6a102a9c5
+timeCreated: 1517115916
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base HumanHead004
+    100002: Base HumanLCalf004
+    100004: Base HumanLCollarbone004
+    100006: Base HumanLFoot004
+    100008: Base HumanLForearm004
+    100010: Base HumanLPalm004
+    100012: Base HumanLThigh004
+    100014: Base HumanLUpperarm004
+    100016: Base HumanNeck009
+    100018: Base HumanNeck010
+    100020: Base HumanPelvis004
+    100022: Base HumanRCalf004
+    100024: Base HumanRCollarbone004
+    100026: Base HumanRFoot004
+    100028: Base HumanRForearm004
+    100030: Base HumanRibcage004
+    100032: Base HumanRPalm004
+    100034: Base HumanRThigh004
+    100036: Base HumanRUpperarm004
+    100038: Base HumanSpine017
+    100040: Base HumanSpine018
+    100042: Base HumanSpine019
+    100044: Base HumanSpine020
+    100046: Box033
+    100048: Box034
+    100050: Box035
+    100052: Box036
+    100054: Cylinder055
+    100056: Plane013
+    100058: Plane014
+    100060: Plane015
+    100062: //RootNode
+    400000: Base HumanHead004
+    400002: Base HumanLCalf004
+    400004: Base HumanLCollarbone004
+    400006: Base HumanLFoot004
+    400008: Base HumanLForearm004
+    400010: Base HumanLPalm004
+    400012: Base HumanLThigh004
+    400014: Base HumanLUpperarm004
+    400016: Base HumanNeck009
+    400018: Base HumanNeck010
+    400020: Base HumanPelvis004
+    400022: Base HumanRCalf004
+    400024: Base HumanRCollarbone004
+    400026: Base HumanRFoot004
+    400028: Base HumanRForearm004
+    400030: Base HumanRibcage004
+    400032: Base HumanRPalm004
+    400034: Base HumanRThigh004
+    400036: Base HumanRUpperarm004
+    400038: Base HumanSpine017
+    400040: Base HumanSpine018
+    400042: Base HumanSpine019
+    400044: Base HumanSpine020
+    400046: Box033
+    400048: Box034
+    400050: Box035
+    400052: Box036
+    400054: Cylinder055
+    400056: Plane013
+    400058: Plane014
+    400060: Plane015
+    400062: //RootNode
+    2100000: 'Material #49'
+    2100002: 'Material #45'
+    2100004: 'Material #43'
+    2100006: 'Material #48'
+    2100008: 'Material #51'
+    2100010: 'Material #42'
+    2100012: 'Material #46'
+    2100014: 'Material #47'
+    2300000: Box034
+    2300002: Box035
+    2300004: Box036
+    2300006: Cylinder055
+    2300008: Plane013
+    2300010: Plane014
+    2300012: Plane015
+    3300000: Box034
+    3300002: Box035
+    3300004: Box036
+    3300006: Cylinder055
+    3300008: Plane013
+    3300010: Plane014
+    3300012: Plane015
+    4300000: Cylinder055
+    4300002: Box036
+    4300004: Box034
+    4300006: Box035
+    4300008: Plane013
+    4300010: Plane014
+    4300012: Plane015
+    4300014: Box033
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box033
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
