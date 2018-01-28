@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-	public Node[,] nodes = new Node[7, 9];
+    public Transform[] startPlayerNodes; // just for two players
+    public int nodesCoutX, nodesCountY;
+	public Node[,] nodes = new Node[7, 10];
 	public Transform horizontalLines;
 	public GameObject chestPrefab;
 	public List<GameObject> currentChests;
 
 	public void Start()
 	{
-		for(int i=0; i < 9; i++)
+		for(int i=0; i < 10; i++)
 		{
 			for(int j = 0; j < 7; j++)
 			{
 				nodes[j, i] = horizontalLines.GetChild(i).GetChild(j).GetComponent<Node>();
+                nodes[j, i].idX = i;
+                nodes[j, i].idY = j;
+                nodes[j, i].colorType = PlayerScript.WikiPonType.None;
 			}
 		}
 
