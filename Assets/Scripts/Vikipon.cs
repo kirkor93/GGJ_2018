@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Vikipon : MonoBehaviour
 {
+	public PlayerScript.WikiPonType type;
 	public bool isSmall = false;
 	Animator anim;
 
@@ -12,7 +13,21 @@ public class Vikipon : MonoBehaviour
 	{
 		isSmall = small;
 		anim = GetComponent<Animator>();
-		anim.SetBool("isSmall", isSmall);
+
+		if (isSmall)
+			transform.localScale = Vector3.one * 0.25f;
+		else
+			transform.localScale = Vector3.one * 0.4f;
+
+		if(type == PlayerScript.WikiPonType.Blue)
+		{
+			anim.SetBool("isSmall", isSmall);
+
+			if (isSmall)
+				anim.Play("small", 0, 0);
+			else
+				anim.Play("big", 0, 0);
+		}
 	}
 	
 	public void Move(Node currentNode, Node targetNode)
