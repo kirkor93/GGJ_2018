@@ -3249,6 +3249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea223144a8f4f714bb12aac720e28fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1537143824}
   game: {fileID: 1669850662}
   markers:
   - {fileID: 508593845}
