@@ -140,19 +140,19 @@ public class GameManager : MonoBehaviour {
     {
         GameObject newWikiPon = null;
 
-        if (wikiPonT == PlayerScript.WikiPonType.Blue)
+        if (wikiPonT == PlayerScript.WikiPonType.Red)
         {
             newWikiPon = wikiPonPrefabs[0];
         }
-        else if (wikiPonT == PlayerScript.WikiPonType.Purple)
+        else if (wikiPonT == PlayerScript.WikiPonType.Yellow)
         {
             newWikiPon = wikiPonPrefabs[1];
         }
-        else if (wikiPonT == PlayerScript.WikiPonType.Red)
+        else if (wikiPonT == PlayerScript.WikiPonType.Purple)
         {
             newWikiPon = wikiPonPrefabs[2];
         }
-        else if (wikiPonT == PlayerScript.WikiPonType.Yellow)
+        else if (wikiPonT == PlayerScript.WikiPonType.Blue)
         {
             newWikiPon = wikiPonPrefabs[3];
         }

@@ -26,7 +26,7 @@ public class Demo : MonoBehaviour
     void Start()
     {
         PlayerScript m = AkkiNetworkManager.Instance.Player.GetComponent<PlayerScript>();
-        AkkiNetworkManager.Instance.RoomConnected += m.OnRoomJoined;
+        //AkkiNetworkManager.Instance.RoomConnected += m.OnRoomJoined;
         gM.AddNewPlayer(m);
         gM.SetCanvas(0, true);
         gM.SetCanvas(1, false);
