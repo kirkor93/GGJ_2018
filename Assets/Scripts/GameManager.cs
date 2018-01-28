@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void CreateWikiPon(PlayerScript.WikiPonType wikiPonT, int wikiPonCounter, PlayerScript playerS)
+    public void CreateWikiPon(PlayerScript.WikiPonType wikiPonT, int wikiPonCounter, PlayerScript playerS, Node lastNode)
     {
         GameObject newWikiPon = null;
 
@@ -157,16 +157,43 @@ public class GameManager : MonoBehaviour {
             newWikiPon = wikiPonPrefabs[3];
         }
 
+        float coePos = 0;
         for (int i = 0; i < wikiPonCounter; i++)
         {
             GameObject newWiki = GameObject.Instantiate(newWikiPon);
-            newWiki.transform.position = playerS.actualNode.transform.position;
+            newWiki.transform.position = lastNode.transform.position;
+            Vikipon newV = newWiki.GetComponent<Vikipon>();
 
             if (playerS.idPlayer == 0)
                 wikiPons1.Add(newWiki);
             else
                 wikiPons2.Add(newWiki);
 
+            if (i == wikiPonCounter - 1)
+            {
+                newV.Init(false, mainBoard);
+                //newV.Move()
+            }
+            else
+            {
+                //if (i)
+                newV.Init(true, mainBoard);
+            }
+
+            coePos += .1f;
+            if (wikiPonCounter > 1 || i != wikiPonCounter - 1)
+            {
+                if (i == 0)
+                {
+                    newWiki.transform.position = new Vector3(newWiki.transform.position.x - coePos, newWiki.transform.position.y, newWiki.transform.position.z);
+                }
+                else if (i == 1)
+                {
+                    newWiki.transform.position = new Vector3(newWiki.transform.position.x + coePos, newWiki.transform.position.y, newWiki.transform.position.z);
+                }
+            }
+
+            newV.Move(lastNode, playerS.newNodesWay[i]);
             //TO DO - animations
         }
     }

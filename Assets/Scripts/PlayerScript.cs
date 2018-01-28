@@ -266,7 +266,9 @@ public class PlayerScript : MonoBehaviour
     public void MakeAction()
     {
         gM.actionButton.interactable = false;
-        gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this);
+        Node lastN = actualNode;
         MovePlayer();
+        gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this, lastN);
+        gM.ChangeActivePlayer();
     }
 }
