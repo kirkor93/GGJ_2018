@@ -87,5 +87,9 @@ public class MarkerManager : MonoBehaviour
 				soundPlayed = false;
 			}
 		}
+		else
+		{
+			soundPlayed = false;
+		}
 	}
 }
