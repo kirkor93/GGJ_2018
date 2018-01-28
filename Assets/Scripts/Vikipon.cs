@@ -12,7 +12,7 @@ public class Vikipon : MonoBehaviour
 	public void Init(bool small)
 	{
 		isSmall = small;
-		anim = GetComponent<Animator>();
+		anim = GetComponentInChildren<Animator>();
 
 		if (isSmall)
 			transform.localScale = Vector3.one * 0.25f;
