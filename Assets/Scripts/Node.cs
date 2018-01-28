@@ -5,6 +5,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
 	public bool haveChest;
+	public GameObject chest;
     public int idX, idY;
     public PlayerScript.WikiPonType colorType = PlayerScript.WikiPonType.None;
 

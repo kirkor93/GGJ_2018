@@ -9,6 +9,7 @@ public class Board : MonoBehaviour
 	public Node[,] nodes = new Node[7, 10];
 	public Transform horizontalLines;
 	public GameObject chestPrefab;
+	public GameObject particlesPrefab;
 	public List<GameObject> currentChests;
 
 	public void Start()
@@ -58,6 +59,52 @@ public class Board : MonoBehaviour
 			chest.transform.parent = targetNode.transform;
 			chest.transform.localPosition = Vector3.zero;
 			currentChests.Add(chest);
+			targetNode.chest = chest;
+		}
+	}
+
+	public void SpawnParticles(Node startingNode,  Node targetNode, PlayerScript.WikiPonType type)
+	{
+		GameObject newParticles = Instantiate(particlesPrefab);
+		newParticles.transform.parent = startingNode.transform;
+
+		var main = newParticles.GetComponentInChildren<ParticleSystem>().main;
+
+		if (type == PlayerScript.WikiPonType.Red)
+		{
+			main.startColor = Color.red;
+		}
+		else if (type == PlayerScript.WikiPonType.Yellow)
+		{
+			main.startColor = Color.yellow;
+		}
+		else if (type == PlayerScript.WikiPonType.Blue)
+		{
+			main.startColor = Color.blue;
+		}
+		else if (type == PlayerScript.WikiPonType.Purple)
+		{
+			main.startColor = Color.magenta;
+		}
+
+		if (startingNode.idX == targetNode.idX)
+		{
+			if(startingNode.idY > targetNode.idY)
+			{
+				newParticles.transform.localEulerAngles = new Vector3(0, 90, 0);
+			}
+			else
+			{
+				newParticles.transform.localEulerAngles = new Vector3(0, 90, 0);
+			}
+		}
+		else
+		{
+			if (startingNode.idX < targetNode.idX)
+			{
+				newParticles.transform.localEulerAngles = Vector3.zero;
+
+			}
 		}
 	}
 }
