@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour {
     public int playerActiveId;
     public List<PlayerScript> playersList;
     public Transform[] obelisks;
-    public GameObject[] wikiPonPrefabs;
+    public GameObject[] wikiPonPrefabs; // 0 - Blue , 1- Purple, 2 - Red, 3 - Yello
+    public List<GameObject> wikiPons1, wikiPons2;
+    public float offSetNode = .14f;
 
 
 	// Use this for initialization
@@ -32,6 +34,19 @@ public class GameManager : MonoBehaviour {
             obelisks[i].DOKill();
             obelisks[i].transform.position = mainBoard.startPlayerNodes[i].position;
         }
+
+        if (wikiPons1.Count > 0)
+        {
+            foreach (GameObject w in wikiPons1)
+                GameObject.Destroy(w);
+            wikiPons1.Clear();
+        }
+        if (wikiPons2.Count > 0)
+        {
+            foreach (GameObject w in wikiPons1)
+                GameObject.Destroy(w);
+            wikiPons2.Clear();
+        }
     }
 
     internal void RemoveCard(int countCard)
@@ -49,23 +64,33 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void CreateWikiPon(PlayerScript.WikiPonType wikiPonT)
+    public void CreateWikiPon(PlayerScript.WikiPonType wikiPonT, int wikiPonCounter, PlayerScript playerS)
     {
+        GameObject newWikiPon = null;
+
         if (wikiPonT == PlayerScript.WikiPonType.Blue)
         {
-
+            newWikiPon = wikiPonPrefabs[0];
         }
         else if (wikiPonT == PlayerScript.WikiPonType.Purple)
         {
-
+            newWikiPon = wikiPonPrefabs[1];
         }
         else if (wikiPonT == PlayerScript.WikiPonType.Red)
         {
-
+            newWikiPon = wikiPonPrefabs[2];
         }
         else if (wikiPonT == PlayerScript.WikiPonType.Yellow)
         {
+            newWikiPon = wikiPonPrefabs[3];
+        }
 
+        for (int i = 0; i < wikiPonCounter; i++)
+        {
+            if (playerS.idPlayer == 0)
+            {
+                GameObject newWiki = GameObject.Instantiate(newWikiPon, playerS.actualNode.transform);
+            }
         }
     }
 }
