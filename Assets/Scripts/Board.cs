@@ -19,8 +19,8 @@ public class Board : MonoBehaviour
 			for(int j = 0; j < 7; j++)
 			{
 				nodes[j, i] = horizontalLines.GetChild(i).GetChild(j).GetComponent<Node>();
-                nodes[j, i].idX = i;
-                nodes[j, i].idY = j;
+                nodes[j, i].idX = j;
+                nodes[j, i].idY = i;
                 nodes[j, i].colorType = PlayerScript.WikiPonType.None;
 			}
 		}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -406,6 +406,11 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 1
+--- !u!4 &146837229 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4423027497039072, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096733093}
 --- !u!1 &150023881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2331,16 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 23910537645901386, guid: 9bff7a92764fe1e49b3d538885110b1e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65925505139878538, guid: 9bff7a92764fe1e49b3d538885110b1e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114296694684214482, guid: 9bff7a92764fe1e49b3d538885110b1e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9bff7a92764fe1e49b3d538885110b1e, type: 2}
@@ -3053,6 +3068,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1521257673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1532086677 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4108498245026610, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096733093}
 --- !u!1 &1628964447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,12 +3213,12 @@ Prefab:
         type: 2}
       propertyPath: obelisks.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 146837229}
     - target: {fileID: 114096382224027882, guid: 5a9f77cfafb855e48818fd3a2ffd3687,
         type: 2}
       propertyPath: obelisks.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1532086677}
     - target: {fileID: 114096382224027882, guid: 5a9f77cfafb855e48818fd3a2ffd3687,
         type: 2}
       propertyPath: wikiPonPrefabs.Array.data[0]
@@ -3514,6 +3534,21 @@ Prefab:
     - target: {fileID: 1062975043895034, guid: 9bff7a92764fe1e49b3d538885110b1e, type: 2}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23910537645901386, guid: 9bff7a92764fe1e49b3d538885110b1e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65925505139878538, guid: 9bff7a92764fe1e49b3d538885110b1e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620103785021324, guid: 9bff7a92764fe1e49b3d538885110b1e,
+        type: 2}
+      propertyPath: idPlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114296694684214482, guid: 9bff7a92764fe1e49b3d538885110b1e, type: 2}
@@ -4131,6 +4166,16 @@ Prefab:
     - target: {fileID: 4808268324593256, guid: 82b3b8b7ad4b9174e92aad3526bfe43e, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134839908792756, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+        type: 2}
+      propertyPath: nodesCoutX
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134839908792756, guid: 82b3b8b7ad4b9174e92aad3526bfe43e,
+        type: 2}
+      propertyPath: nodesCountY
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82b3b8b7ad4b9174e92aad3526bfe43e, type: 2}

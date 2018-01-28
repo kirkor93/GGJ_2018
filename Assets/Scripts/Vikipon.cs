@@ -17,9 +17,9 @@ public class Vikipon : MonoBehaviour
 		anim = GetComponentInChildren<Animator>();
 
 		if (isSmall)
-			transform.localScale = Vector3.one * 0.25f;
+			transform.localScale = Vector3.one * 0.125f;
 		else
-			transform.localScale = Vector3.one * 0.4f;
+			transform.localScale = Vector3.one * 0.2f;
 
 		if(type == PlayerScript.WikiPonType.Blue)
 		{

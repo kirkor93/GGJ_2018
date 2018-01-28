@@ -58,10 +58,6 @@ public class PlayerScript : MonoBehaviour
     private float _nextBroadcastTime = 0;
     private Vector3 LastPlayerPosition;
 
-    public void InitData()
-    {
-
-    }
 
     void Update()
     {
@@ -90,17 +86,17 @@ public class PlayerScript : MonoBehaviour
         transform.position = startNode.position;
 
         ActionStructure actionStruct = new ActionStructure( WikiPonType.None, MoveDirection.Up, 0);
+        SetActionStructureValues(WikiPonType.Red, MoveDirection.Right, 3);
     }
 
     //Move
     public void MovePlayer()
     {
-        newNodesWay.Clear();
-
         if (idPlayer == 0)
         {
-            if (actionStruct.moveType == MoveDirection.Up)
+            if (actionStruct.moveType == MoveDirection.Right)
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
                 for (int i = actualNode.idX; i <= actualNode.idX + actionStruct.incrementatorType; i++)
@@ -110,8 +106,8 @@ public class PlayerScript : MonoBehaviour
                 }
 
                 actionStruct.incrementatorType = newID;
-
-                for (int i = actualNode.idX; i <= actualNode.idX + actionStruct.incrementatorType; i++)
+                */
+                for (int i = actualNode.idX; i < actualNode.idX + actionStruct.incrementatorType; i++)
                 {
                     if (i < gM.mainBoard.nodesCoutX && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
                     {
@@ -122,19 +118,21 @@ public class PlayerScript : MonoBehaviour
                         break;
                 }
             }
-            else if (actionStruct.moveType == MoveDirection.Right)
+            else if (actionStruct.moveType == MoveDirection.Up)
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
                 for (int i = actualNode.idY; i <= actualNode.idY + actionStruct.incrementatorType; i++)
                 {
-                    if (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
+                    if (i < gM.mainBoard.nodesCountY && gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
                         ++newID;
                 }
 
                 actionStruct.incrementatorType = newID;
-            
-                for (int i = actualNode.idY; i <= actualNode.idY + actionStruct.incrementatorType; i++)
+                */
+
+                for (int i = actualNode.idY; i < actualNode.idY + actionStruct.incrementatorType; i++)
                 {
                     if (i < gM.mainBoard.nodesCountY && (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[actualNode.idX, i].colorType == PlayerScript.WikiPonType.None))
                     {
@@ -147,21 +145,22 @@ public class PlayerScript : MonoBehaviour
             }
             else
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
-                for (int i = actualNode.idY; i >= actualNode.idY - actionStruct.incrementatorType; i--)
+                for (int i = actualNode.idX; i >= actualNode.idX - actionStruct.incrementatorType; i--)
                 {
-                    if (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
+                    if (i >= 0 && gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType)
                         ++newID;
                 }
 
                 actionStruct.incrementatorType = newID;
-
-                for (int i = actualNode.idY; i >= actualNode.idY - actionStruct.incrementatorType; i--)
+                */
+                for (int i = actualNode.idX; i > actualNode.idX - actionStruct.incrementatorType; i--)
                 {
-                    if (i > -1 && (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[actualNode.idX, i].colorType == PlayerScript.WikiPonType.None))
+                    if (i >= 0 && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
                     {
-                        actualNode = gM.mainBoard.nodes[actualNode.idX, i];
+                        actualNode = gM.mainBoard.nodes[i, actualNode.idY];
                         AddNodeToWay();
                     }
                     else
@@ -171,19 +170,21 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            if (actionStruct.moveType == MoveDirection.Up)
+            Debug.Log(idPlayer + "    " + actionStruct.moveType);
+            if (actionStruct.moveType == MoveDirection.Left)
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
                 for (int i = actualNode.idX; i <= actualNode.idX + actionStruct.incrementatorType; i++)
                 {
-                    if (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType)
+                    if (i < gM.mainBoard.nodesCoutX && gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType)
                         ++newID;
                 }
 
                 actionStruct.incrementatorType = newID;
-
-                for (int i = actualNode.idX; i <= actualNode.idX + actionStruct.incrementatorType; i++)
+                */
+                for (int i = actualNode.idX; i < actualNode.idX + actionStruct.incrementatorType; i++)
                 {
                     if (i < gM.mainBoard.nodesCoutX && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
                     {
@@ -196,21 +197,23 @@ public class PlayerScript : MonoBehaviour
             }
             else if (actionStruct.moveType == MoveDirection.Right)
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
-                for (int i = actualNode.idY; i <= actualNode.idY + actionStruct.incrementatorType; i++)
+                for (int i = actualNode.idY; i >= actualNode.idY - actionStruct.incrementatorType; i--)
                 {
-                    if (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
+                    if (i > 0 && gM.mainBoard.nodes[i, actualNode.idX].colorType == actionStruct.wikiPonType)
                         ++newID;
                 }
 
                 actionStruct.incrementatorType = newID;
+                */
 
-                for (int i = actualNode.idY; i <= actualNode.idY + actionStruct.incrementatorType; i++)
+                for (int i = actualNode.idX; i > actualNode.idX - actionStruct.incrementatorType; i--)
                 {
-                    if (i < gM.mainBoard.nodesCountY && (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[actualNode.idX, i].colorType == PlayerScript.WikiPonType.None))
+                    if (i > -1 && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
                     {
-                        actualNode = gM.mainBoard.nodes[actualNode.idX, i];
+                        actualNode = gM.mainBoard.nodes[i, actualNode.idY];
                         AddNodeToWay();
                     }
                     else
@@ -219,17 +222,18 @@ public class PlayerScript : MonoBehaviour
             }
             else
             {
+                /*
                 int newID = actionStruct.incrementatorType;
 
                 for (int i = actualNode.idY; i >= actualNode.idY - actionStruct.incrementatorType; i--)
                 {
-                    if (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
+                    if (i > -1 && gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType)
                         ++newID;
                 }
 
                 actionStruct.incrementatorType = newID;
-
-                for (int i = actualNode.idY; i >= actualNode.idY - actionStruct.incrementatorType; i--)
+                */
+                for (int i = actualNode.idY; i > actualNode.idY - actionStruct.incrementatorType; i--)
                 {
                     if (i > -1 && (gM.mainBoard.nodes[actualNode.idX, i].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[actualNode.idX, i].colorType == PlayerScript.WikiPonType.None))
                     {
@@ -247,6 +251,7 @@ public class PlayerScript : MonoBehaviour
     {
         actualNode.colorType = actionStruct.wikiPonType;
         newNodesWay.Add(actualNode);
+        Debug.Log(idPlayer.ToString() + "      "+ actualNode.name);
     }
 
     public void VibratePhone()
@@ -265,10 +270,15 @@ public class PlayerScript : MonoBehaviour
 
     public void MakeAction()
     {
+        newNodesWay.Clear();
+        newNodesWay = new List<Node>();
+
         gM.actionButton.interactable = false;
         Node lastN = actualNode;
         MovePlayer();
+
         gM.CreateWikiPon(actionStruct.wikiPonType, actionStruct.incrementatorType, this, lastN);
         gM.ChangeActivePlayer();
+        SetActionStructureValues(WikiPonType.Red, MoveDirection.Up, 3);
     }
 }

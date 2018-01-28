@@ -66,6 +66,13 @@ public class GameManager : MonoBehaviour {
         allCards = 72;
         timeForPlayerMove = -10f;
 
+        int id = 0;
+        foreach (PlayerScript p in playersList)
+        {
+            p.InitData(this, mainBoard.startPlayerNodes[id], mainBoard.startPlayerNodes[id].GetComponent<Node>(), obelisks[id]);
+            ++id;
+        }
+
         for (int i = 0; i < obelisks.Length; i++)
         {
             obelisks[i].DOKill();
@@ -95,7 +102,7 @@ public class GameManager : MonoBehaviour {
 
         playerActiveId = 0;
         SetStartGame(true);
-        actionButton.interactable = false;
+        //actionButton.interactable = false;
         avatars[0].color = new Color(1, 1, 1, 1);
         avatars[1].color = new Color(1, 1, 1,.3f);
     }
@@ -180,7 +187,8 @@ public class GameManager : MonoBehaviour {
                 newV.Init(true, mainBoard);
             }
 
-            coePos += .1f;
+            //coePos += .1f;
+            coePos = 0;
             if (wikiPonCounter > 1 || i != wikiPonCounter - 1)
             {
                 if (i == 0)
