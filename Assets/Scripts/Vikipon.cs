@@ -10,6 +10,11 @@ public class Vikipon : MonoBehaviour
 	Animator anim;
 	Board board;
 
+	private void Update()
+	{
+		transform.localEulerAngles = Vector3.zero;
+	}
+
 	public void Init(bool small, Board _board)
 	{
 		board = _board;
@@ -46,9 +51,10 @@ public class Vikipon : MonoBehaviour
 			time = 1.0f * Mathf.Abs(currentNode.idX - targetNode.idX);
 		}
 
-		transform.DOMove(targetNode.transform.position, time).OnComplete(() =>
+		transform.parent = targetNode.transform;
+
+		transform.DOLocalMove(Vector3.zero, time).OnComplete(() =>
 		{
-			transform.parent = targetNode.transform;
 			anim.SetBool("moving", false);
 			board.SpawnParticles(currentNode, targetNode, type);
 

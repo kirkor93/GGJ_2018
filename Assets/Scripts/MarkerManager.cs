@@ -24,7 +24,7 @@ public class MarkerManager : MonoBehaviour
 
 		List<Marker.Type> visibleTypes = new List<Marker.Type>();
 
-		if (visibleMarkers.Count == 3)
+		if (visibleMarkers.Count >= 3)
 		{
 			foreach (Marker m in visibleMarkers)
 			{

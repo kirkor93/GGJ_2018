@@ -109,7 +109,7 @@ public class PlayerScript : MonoBehaviour
                 */
                 for (int i = actualNode.idX; i < actualNode.idX + actionStruct.incrementatorType; i++)
                 {
-                    if (i < gM.mainBoard.nodesCoutX && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
+                    if (i < gM.mainBoard.nodesCountY && (gM.mainBoard.nodes[i, actualNode.idY].colorType == actionStruct.wikiPonType || gM.mainBoard.nodes[i, actualNode.idY].colorType == PlayerScript.WikiPonType.None))
                     {
                         actualNode = gM.mainBoard.nodes[i, actualNode.idY];
                         AddNodeToWay();
